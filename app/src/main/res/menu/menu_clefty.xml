@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option1"
+        android:title="Treble"
+        android:titleCondensed="TREBLE"
+        android:icon="@drawable/trebleclef"
+        />
+    <item
+        android:id="@+id/option2"
+        android:title="Bass"
+        android:titleCondensed="BASS"
+        android:icon="@drawable/bassclef"/>
+</menu>

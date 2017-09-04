@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customattr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/idRelativeLStaffView">
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_tbl"
+    android:stretchColumns="2"
+    android:shrinkColumns="0,4"
+     >
+
+    <TableRow android:layout_height="200dp" android:paddingBottom="5dp">
+        <TextView android:text="1.1"
+            android:paddingRight="10dp"/>
+        <TextView android:text="Celda 1.2" android:paddingRight="0dp"
+        android:layout_span="3"
+            android:id="@+id/textView"
+            />
+        <TextView android:text="1.5"
+            />
+    </TableRow>
+
+    <TableRow android:id="@+id/idRow_a" android:paddingBottom="5dp">
+        <TextView android:text="2.1" android:paddingRight="10dp"
+            />
+        <TextView
+            android:text="2.2" android:paddingRight="0dp"
+            />
+        <TextView
+        android:text="Grand Staff" android:paddingRight="10dp" android:textAlignment="center"
+        />
+        <TextView
+            android:text="2.4" android:paddingRight="10dp"
+            />
+        <TextView
+            android:text="2.5" android:paddingRight="10dp"
+            />
+    </TableRow>
+
+    <TableRow android:id="@+id/idRow_b" android:paddingBottom="5dp"
+        >
+        <TextView
+            android:text="3.1" android:paddingRight="10dp"
+            />
+        <TextView
+            android:text="Select notes to analyze" android:paddingRight="0dp"
+            android:layout_span="3"
+            android:textAlignment="center"
+            android:id="@+id/textView3" />
+        <TextView
+            android:text="3.5" android:paddingRight="10dp"
+            />
+    </TableRow>
+
+    <TableRow android:id="@+id/idRowStaffTable"
+        android:paddingBottom="5dp">
+        <TextView
+        android:text="4.1" android:paddingRight="5dp"
+        />
+        <!--<TextView
+            android:text="4.2" android:paddingRight="10dp"
+            /> -->
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="135dp"
+            android:scrollbars="none"
+            android:layout_weight="1"
+            android:layout_span="3">
+        <TableLayout android:id="@+id/idStaff"  android:layout_height="200dp" android:layout_width="800dp" android:isScrollContainer="true">
+         <TableRow>
+            <!--<TableLayout android:paddingRight="0dp" android:layout_height="wrap_content">
+                <TableRow android:id="@+id/idClefRow" android:background="#FFFFFF">
+                    <com.research.robertodvp.audioanalyzer.StaffClef android:id="@+id/idClef" style="@style/StaffClef"
+                        android:layout_width="50dp" />
+                </TableRow>
+            </TableLayout>-->
+            <TableLayout android:id="@+id/idStaffClefTable" android:paddingRight="0dp" android:layout_height="wrap_content" >
+
+                <TableRow android:id="@+id/idCSRow_A5" android:layout_height="wrap_content">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote	android:id="@+id/idCSCellLine_A5_2" style="@style/CellStaffBlank"	/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote	android:id="@+id/idCSCellLine_A5_4" style="@style/CellStaffBlank"	/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote	android:id="@+id/idCSCellLine_A5_6" style="@style/CellStaffBlank"	/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote	android:id="@+id/idCSCellLine_A5_8" style="@style/CellStaffBlank"	/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_A5_9" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_10" customattr:isSignature="true" style="@style/CellStaffBlank"	/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_A5_11" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_12" customattr:isSignature="true" style="@style/CellStaffBlank"	/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_A5_13" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_14" customattr:isSignature="true" style="@style/CellStaffBlank"	/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_A5_15" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A5_16" customattr:isSignature="true" style="@style/CellStaffBlank"	/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_G5">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_G5_9" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_G5_11" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_G5_13" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote customattr:isSignature="true" android:id="@+id/idCSCellLine_G5_15" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G5_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_F5">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_1" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_2" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_3" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_4" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_5" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_6" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_7" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_8" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_9" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_10" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_11" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_12" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_13" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_14" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_15" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F5_16" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_E5">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_9" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_11" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_13" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_15" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E5_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_D5">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_1" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_2" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_3" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_4" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_5" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_6" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_7" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_8" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_9" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_10" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_11" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_12" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_13" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_14" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_15" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D5_16" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_C5">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_9" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_11" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_13" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_15" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C5_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_B4">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_1" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_2" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_3" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_4" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_5" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_6" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_7" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_8" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_9" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_10" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_11" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_12" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_13" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_14" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_15" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B4_16" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_A4">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_9" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_11" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_13" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_15" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_A4_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_G4">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_1" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_2" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_3" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_4" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_5" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_6" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_7" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_8" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_9" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_10" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_11" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_12" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_13" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_14" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_15" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_G4_16" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_F4">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_9" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_11" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_13" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_15" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_F4_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_E4">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_1" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_2" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_3" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_4" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_5" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_6" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_7" style="@style/CellStaffClefLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_8" style="@style/CellStaffClefLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_9" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_10" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_11" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_12" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_13" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_14" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_15" customattr:isSignature="true" style="@style/CellStaffSignLine" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_E4_16" customattr:isSignature="true" style="@style/CellStaffSignLine"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_D4">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_9" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_11" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_13" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_15" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_D4_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_C4">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_9" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_11" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_13" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_15" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_C4_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+                <TableRow android:id="@+id/idCSRow_B3">
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_1" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_2" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_3" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_4" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_5" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_6" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_7" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_8" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_9" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_10" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_11" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_12" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_13" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_14" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                    <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_15" customattr:isSignature="true" style="@style/CellStaffBlank" /> <com.research.robertodvp.audioanalyzer.StaffCSNote android:id="@+id/idCSCellLine_B3_16" customattr:isSignature="true" style="@style/CellStaffBlank"/>
+                </TableRow>
+            </TableLayout>
+            <TableLayout android:id="@+id/idStaffActiveNotesTable" android:paddingRight="2dp" android:layout_height="wrap_content" >
+            <TableRow android:id="@+id/idRow_A5" android:layout_height="wrap_content">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_1" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_25" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_2" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_26" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_3" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_27" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_4" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_28" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_5" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_29" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_6" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_30" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_7" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_31" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_8" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_32" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_9" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_33" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_10" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_34" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_11" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_35" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_12" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_36" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_13" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_37" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_14" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_38" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_15" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_39" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_16" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_40" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_17" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_41" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_18" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_42" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_19" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_43" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_20" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_44" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_21" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_45" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_22" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_46" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_23" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_47" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_24" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A5_48" style="@style/CellStaffImgLine"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_G5">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_1" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_25" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_2" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_26" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_3" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_27" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_4" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_28" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_5" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_29" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_6" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_30" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_7" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_31" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_8" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_32" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_9" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_33" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_10" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_34" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_11" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_35" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_12" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_36" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_13" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_37" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_14" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_38" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_15" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_39" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_16" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_40" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_17" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_41" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_18" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_42" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_19" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_43" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_20" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_44" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_21" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_45" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_22" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_46" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_23" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_47" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_24" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G5_48" style="@style/CellStaffBlank"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_F5">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_1" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_25" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_2" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_26" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_3" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_27" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_4" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_28" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_5" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_29" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_6" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_30" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_7" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_31" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_8" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_32" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_9" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_33" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_10" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_34" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_11" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_35" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_12" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_36" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_13" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_37" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_14" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_38" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_15" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_39" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_16" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_40" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_17" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_41" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_18" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_42" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_19" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_43" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_20" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_44" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_21" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_45" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_22" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_46" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_23" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_47" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_24" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F5_48" style="@style/CellStaffLine"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_E5">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_1" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_25" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_2" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_26" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_3" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_27" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_4" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_28" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_5" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_29" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_6" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_30" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_7" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_31" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_8" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_32" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_9" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_33" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_10" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_34" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_11" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_35" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_12" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_36" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_13" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_37" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_14" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_38" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_15" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_39" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_16" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_40" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_17" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_41" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_18" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_42" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_19" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_43" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_20" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_44" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_21" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_45" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_22" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_46" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_23" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_47" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_24" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E5_48" style="@style/CellStaffBlank"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_D5">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_1" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_25" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_2" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_26" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_3" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_27" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_4" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_28" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_5" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_29" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_6" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_30" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_7" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_31" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_8" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_32" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_9" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_33" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_10" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_34" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_11" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_35" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_12" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_36" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_13" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_37" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_14" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_38" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_15" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_39" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_16" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_40" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_17" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_41" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_18" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_42" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_19" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_43" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_20" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_44" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_21" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_45" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_22" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_46" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_23" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_47" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_24" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D5_48" style="@style/CellStaffLine"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_C5">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_1" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_25" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_2" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_26" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_3" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_27" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_4" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_28" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_5" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_29" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_6" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_30" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_7" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_31" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_8" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_32" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_9" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_33" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_10" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_34" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_11" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_35" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_12" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_36" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_13" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_37" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_14" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_38" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_15" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_39" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_16" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_40" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_17" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_41" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_18" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_42" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_19" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_43" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_20" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_44" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_21" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_45" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_22" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_46" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_23" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_47" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_24" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C5_48" style="@style/CellStaffBlank"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_B4">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_1" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_25" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_2" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_26" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_3" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_27" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_4" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_28" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_5" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_29" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_6" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_30" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_7" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_31" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_8" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_32" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_9" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_33" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_10" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_34" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_11" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_35" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_12" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_36" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_13" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_37" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_14" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_38" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_15" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_39" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_16" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_40" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_17" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_41" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_18" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_42" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_19" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_43" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_20" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_44" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_21" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_45" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_22" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_46" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_23" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_47" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_24" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B4_48" style="@style/CellStaffLine"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_A4">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_1" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_25" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_2" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_26" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_3" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_27" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_4" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_28" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_5" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_29" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_6" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_30" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_7" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_31" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_8" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_32" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_9" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_33" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_10" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_34" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_11" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_35" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_12" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_36" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_13" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_37" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_14" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_38" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_15" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_39" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_16" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_40" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_17" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_41" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_18" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_42" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_19" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_43" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_20" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_44" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_21" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_45" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_22" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_46" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_23" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_47" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_24" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_A4_48" style="@style/CellStaffBlank"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_G4">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_1" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_25" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_2" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_26" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_3" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_27" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_4" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_28" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_5" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_29" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_6" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_30" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_7" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_31" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_8" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_32" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_9" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_33" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_10" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_34" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_11" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_35" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_12" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_36" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_13" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_37" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_14" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_38" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_15" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_39" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_16" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_40" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_17" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_41" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_18" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_42" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_19" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_43" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_20" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_44" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_21" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_45" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_22" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_46" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_23" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_47" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_24" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_G4_48" style="@style/CellStaffLine"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_F4">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_1" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_25" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_2" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_26" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_3" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_27" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_4" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_28" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_5" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_29" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_6" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_30" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_7" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_31" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_8" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_32" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_9" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_33" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_10" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_34" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_11" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_35" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_12" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_36" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_13" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_37" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_14" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_38" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_15" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_39" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_16" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_40" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_17" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_41" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_18" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_42" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_19" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_43" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_20" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_44" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_21" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_45" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_22" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_46" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_23" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_47" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_24" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_F4_48" style="@style/CellStaffBlank"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_E4">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_1" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_25" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_2" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_26" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_3" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_27" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_4" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_28" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_5" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_29" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_6" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_30" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_7" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_31" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_8" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_32" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_9" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_33" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_10" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_34" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_11" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_35" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_12" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_36" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_13" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_37" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_14" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_38" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_15" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_39" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_16" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_40" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_17" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_41" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_18" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_42" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_19" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_43" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_20" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_44" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_21" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_45" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_22" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_46" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_23" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_47" style="@style/CellStaffLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_24" style="@style/CellStaffLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_E4_48" style="@style/CellStaffLine"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_D4">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_1" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_25" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_2" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_26" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_3" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_27" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_4" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_28" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_5" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_29" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_6" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_30" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_7" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_31" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_8" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_32" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_9" style="@style/CellStaffBlank"  />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_33" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_10" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_34" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_11" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_35" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_12" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_36" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_13" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_37" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_14" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_38" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_15" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_39" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_16" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_40" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_17" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_41" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_18" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_42" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_19" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_43" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_20" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_44" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_21" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_45" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_22" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_46" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_23" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_47" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_24" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_D4_48" style="@style/CellStaffBlank"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_C4">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_1" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_25" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_2" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_26" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_3" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_27" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_4" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_28" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_5" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_29" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_6" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_30" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_7" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_31" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_8" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_32" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_9" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_33" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_10" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_34" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_11" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_35" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_12" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_36" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_13" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_37" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_14" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_38" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_15" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_39" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_16" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_40" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_17" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_41" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_18" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_42" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_19" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_43" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_20" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_44" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_21" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_45" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_22" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_46" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_23" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_47" style="@style/CellStaffImgLine"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_24" style="@style/CellStaffImgLine" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_C4_48" style="@style/CellStaffImgLine"	/>
+            </TableRow>
+            <TableRow android:id="@+id/idRow_B3">
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_1" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_25" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_2" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_26" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_3" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_27" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_4" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_28" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_5" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_29" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_6" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_30" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_7" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_31" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_8" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_32" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_9" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_33" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_10" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_34" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_11" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_35" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_12" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_36" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_13" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_37" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_14" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_38" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_15" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_39" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_16" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_40" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_17" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_41" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_18" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_42" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_19" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_43" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_20" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_44" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_21" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_45" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_22" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_46" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_23" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_47" style="@style/CellStaffBlank"	/>
+                <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_24" style="@style/CellStaffBlank" />		 <com.research.robertodvp.audioanalyzer.StaffNote	android:id="@+id/idCellLine_B3_48" style="@style/CellStaffBlank"	/>
+            </TableRow>
+        </TableLayout>
+         </TableRow>
+        </TableLayout>
+        </ScrollView>
+        <TextView
+            android:text="4.5"
+            />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="5.1" />
+        <TextView android:text="Selected Note:"/>
+        <android.support.v7.widget.AppCompatTextView android:layout_span="2"  android:id="@+id/idStaffNoteDisplayText"  android:text="---" />
+        <TextView android:text="5.5" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="6.1" />
+        <TextView android:text="6.2" />
+        <Button android:id="@+id/saveSelectedNotes_btn" android:text="Save Selected Notes" android:layout_span="2"/>
+        <TextView android:text="6.5" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="7.1" />
+        <TextView android:text="Saved Notes:"/>
+        <android.support.v7.widget.AppCompatTextView android:layout_span="2"  android:id="@+id/idSavedSelectedNotes"  android:text="---" />
+        <TextView android:text="7.5" />
+    </TableRow>
+
+
+</TableLayout>
+
+    <!--<com.research.robertodvp.audioanalyzer.StaffNoteView
+        android:id="@+id/idStaffNoteView"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+
+</RelativeLayout>

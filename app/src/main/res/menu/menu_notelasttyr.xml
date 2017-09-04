@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option1"
+        android:title="Double Whole"
+        android:icon="@drawable/dwholer"/>
+    />
+    <item
+        android:id="@+id/option2"
+        android:title="Whole"/>
+       <!-- android:icon="@drawable/wholer"/> -->
+    <item
+        android:id="@+id/option3"
+        android:title="Half"/>
+    <!--android:icon="@drawable/halfr"/> -->
+<item
+    android:id="@+id/option4"
+    android:title="Quarter"/>
+    android:icon="@drawable/quarterr"/>
+<item
+    android:id="@+id/option5"
+    android:title="Eight"/>
+   <!-- android:icon="@drawable/eightr"/> -->
+<item
+    android:id="@+id/option6"
+    android:title="Sixteenth"/>
+   <!-- android:icon="@drawable/sixteenthr"/> -->
+<item
+    android:id="@+id/option7"
+    android:title="Thirty Second"/>
+   <!-- android:icon="@drawable/thirtysecondr"/> -->
+<item
+    android:id="@+id/option8"
+    android:title="Sixty fourth"/>
+  <!--  android:icon="@drawable/sixtyfourthr"/> -->
+<item
+    android:id="@+id/option9"
+    android:title="Hundred twenty eight"/>
+   <!-- android:icon="@drawable/htwentyeightr"/> -->
+<item
+    android:id="@+id/option10"
+    android:title="Two Hundred fifty sixth"/>
+    <!-- android:icon="@drawable/thfiftysixthr"/> -->
+</menu>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,36 +9,41 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.research.robertodvp.audioanalyzer.MainActivity">
+    tools:context="com.research.robertodvp.audioanalyzer.MainActivity"
+    android:foreground="?android:attr/selectableItemBackground">
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/idRecordButton"
-        android:text="Start Recording"
+        android:id="@+id/idMainButton1"
+        android:text="Audio Analyzer"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/idPlayButton"
-        android:text="Start Playing"
+        android:id="@+id/idMainButton2"
+        android:text="Notes Identifier"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/idRecordButton" />
+        android:layout_toEndOf="@+id/idMainButton1" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/idViewAudtioButton"
-        android:text="View Audio"
-        android:layout_below="@+id/idRecordButton"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/idMainButton3"
+        android:text="Grand Staff"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/idMainButton2" />
 
-    <com.research.robertodvp.audiorecorder.VisualizerView
-        android:id="@+id/idVisualizerView"
-        android:layout_marginTop="100dp"
-        android:layout_width="match_parent"
-        android:layout_height="400dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idMainButton5"
+        android:text="Portfolio"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/idMainButton3" />
+
+
 </RelativeLayout>

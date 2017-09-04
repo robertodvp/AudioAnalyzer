@@ -1,0 +1,364 @@
+<resources>
+    <declare-styleable name="StaffNote">
+        <attr name="exampleString" format="string" />
+        <attr name="exampleDimension" format="dimension" />
+        <attr name="exampleColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+    <array name="Frequencies">
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">8</Octave>
+            <Hertz dataType="Double">4186.01</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">3951.07</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">3729.31</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">3520</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">GS</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">3322.44</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">G</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">3135.96</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">FS</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">2959.96</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">F</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">2793.83</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">E</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">2637.02</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">DS</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">2489.02</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">D</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">2349.32</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">CS</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">2217.46</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">7</Octave>
+            <Hertz dataType="Double">2093</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1975.53</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1864.66</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1760</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">GS</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1661.22</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">G</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1567.98</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">FS</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1479.98</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">F</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1396.91</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">E</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1318.51</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">DS</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1244.51</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">D</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1174.66</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">CS</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1108.73</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">6</Octave>
+            <Hertz dataType="Double">1046.5</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">987.767</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">932.328</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">880</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">GS</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">830.609</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">G</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">783.991</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">FS</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">739.989</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">F</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">698.456</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">E</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">659.255</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">DS</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">622.254</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">D</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">587.33</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">CS</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">554.365</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">5</Octave>
+            <Hertz dataType="Double">523.251</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">493.883</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">466.164</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">440</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">GS</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">415.305</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">G</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">391.995</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">FS</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">369.994</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">F</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">349.228</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">E</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">329.628</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">DS</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">311.127</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">D</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">293.665</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">CS</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">277.183</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">4</Octave>
+            <Hertz dataType="Double">261.626</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">246.942</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">233.082</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">220</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">GS</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">207.652</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">G</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">195.998</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">FS</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">184.997</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">F</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">174.614</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">E</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">164.814</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">DS</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">155.563</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">D</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">146.832</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">CS</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">138.591</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">3</Octave>
+            <Hertz dataType="Double">130.813</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">123.471</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">116.541</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">110</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">GS</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">103.826</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">G</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">97.9989</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">FS</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">92.4986</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">F</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">87.3071</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">E</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">82.4069</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">DS</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">77.7817</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">D</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">73.4162</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">CS</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">69.2957</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">2</Octave>
+            <Hertz dataType="Double">65.4064</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">61.7354</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">58.2705</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">55</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">GS</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">51.913</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">G</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">48.9995</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">FS</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">46.2493</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">F</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">43.6536</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">E</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">41.2035</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">DS</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">38.8909</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">D</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">36.7081</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">CS</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">34.6479</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">C</Note><Octave dataType="Int">1</Octave>
+            <Hertz dataType="Double">32.7032</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">B</Note><Octave dataType="Int">0</Octave>
+            <Hertz dataType="Double">30.8677</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">AS</Note><Octave dataType="Int">0</Octave>
+            <Hertz dataType="Double">29.1353</Hertz>
+        </item>
+        <item>
+            <Note dataType="String">A</Note><Octave dataType="Int">0</Octave>
+            <Hertz dataType="Double">27.5</Hertz>
+        </item>
+
+
+    </array>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.research.robertodvp.audioanalyzer.View.ScoreThumbView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:columnCount="6"
+        android:orientation="horizontal"
+        android:rowCount="2">
+
+        <ImageView
+            android:id="@+id/thumbScoreView"
+            android:layout_width="97dp"
+            android:layout_height="80dp"
+            android:layout_column="0"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:padding="2dp"
+            android:paddingBottom="2dp"
+            android:paddingEnd="2dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingStart="2dp"
+            android:paddingTop="2dp"
+            app:srcCompat="@drawable/grand_staff_195px" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_rowSpan="2" />
+
+        <TextView
+            android:id="@+id/lblTxtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="11dp"
+            android:layout_row="0"
+            android:layout_toEndOf="@+id/thumbScoreView"
+            android:text="Name:" />
+
+        <TextView
+            android:id="@+id/dataTxtName"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="11dp"
+            android:layout_row="0"
+            android:layout_toRightOf="@+id/lblTxtName"
+            android:text="Name Data" />
+
+        <TextView
+            android:id="@+id/lblTxtAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dataTxtName"
+            android:layout_column="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="11dp"
+            android:layout_row="1"
+            android:layout_toEndOf="@+id/thumbScoreView"
+            android:text="Author:" />
+
+        <TextView
+            android:id="@+id/dataTxtAuthor"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dataTxtName"
+            android:layout_column="3"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginTop="11dp"
+            android:layout_row="1"
+            android:layout_toRightOf="@+id/lblTxtAuthor"
+            android:text="Author Data" />
+
+        <ImageView
+            android:id="@+id/trash"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="5"
+            android:layout_gravity="fill_horizontal"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_trash_real" />
+
+
+    </GridLayout>
+</com.research.robertodvp.audioanalyzer.View.ScoreThumbView>

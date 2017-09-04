@@ -8,4 +8,48 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="BackGroundImageView">
+        <item name="android:alpha">0.5</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/grandstaff_bg</item>
+    </style>
+
+    <style name="CellStaffLine">
+        <item name="android:alpha">1</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/cellstaffline_bg</item>
+    </style>
+
+    <style name="CellStaffClefLine">
+        <item name="android:alpha">1</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/cellstafflineclef_bg</item>
+    </style>
+
+    <style name="CellStaffSignLine">
+        <item name="android:alpha">1</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/cellstafflinesign_bg</item>
+    </style>
+
+    <style name="CellStaffImgLine">
+        <item name="android:alpha">1</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/cellstaffimgline_bg</item>
+    </style>
+
+    <style name="CellStaffBlank">
+        <item name="android:alpha">1</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/cellstaffblank_bg</item>
+    </style>
+
+    <style name="popupMenuStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:itemBackground">#000000</item>
+        <item name="android:divider">#eaeaea</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+
 </resources>

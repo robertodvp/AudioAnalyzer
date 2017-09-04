@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option1"
+        android:title="C M/A m"
+        android:titleCondensed="CMAJOR"
+        android:icon="@drawable/trebleclef"
+        />
+    <item
+        android:id="@+id/option2"
+        android:title="G M/E m"
+        android:titleCondensed="GMAJOR"
+        android:icon="@drawable/bassclef"/>
+</menu>

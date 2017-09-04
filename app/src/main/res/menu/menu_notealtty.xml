@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/option1"
+        android:title="Single"
+        android:titleCondensed="SINGLE"
+       />
+    <item
+    android:id="@+id/option2"
+    android:title="Sharp"
+        android:titleCondensed="SHARP"
+        android:icon="@drawable/sharp"/>
+    <item
+        android:id="@+id/option3"
+        android:title="Flat"
+        android:titleCondensed="FLAT"
+        android:icon="@drawable/flat"/>
+    <item
+        android:id="@+id/option4"
+        android:title="Double Sharp"
+        android:titleCondensed="DSHARP"
+        android:icon="@drawable/dsharp"/>
+    <item
+        android:id="@+id/option5"
+        android:title="Double Flat"
+        android:titleCondensed="DFLAT"
+        android:icon="@drawable/dflat"/>
+    <item
+        android:id="@+id/option6"
+        android:title="Change Note Last"
+        android:titleCondensed="CNL"
+        android:icon="@drawable/quarter"/>
+    <item
+        android:id="@+id/option7"
+        android:titleCondensed="REMOVE"
+        android:title="REMOVE"/>
+</menu>
