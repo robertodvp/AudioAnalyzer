@@ -1,0 +1,41 @@
+ <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.research.robertodvp.audioanalyzer.StaffNoteSettingsActivity$GeneralPreferenceFragment"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="@string/pref_header_general" />
+
+    <header
+        android:fragment="com.research.robertodvp.audioanalyzer.StaffNoteSettingsActivity$NotificationPreferenceFragment"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/pref_header_notifications" />
+
+    <header
+        android:fragment="com.research.robertodvp.audioanalyzer.StaffNoteSettingsActivity$DataSyncPreferenceFragment"
+        android:icon="@drawable/ic_sync_black_24dp"
+        android:title="@string/pref_header_data_sync" />
+
+     <header android:fragment="com.research.robertodvp.audioanalyzer.StaffNoteSettingsActivity$Prefs1FragmentInner"
+         android:icon="@drawable/ic_settings"
+         android:title="Prefs 1"
+         android:summary="An example of some preferences." />
+
+     <header android:fragment="com.research.robertodvp.audioanalyzer.StaffNoteSettingsActivity$Prefs2Fragment"
+         android:icon="@drawable/ic_settings"
+         android:title="Prefs 2"
+         android:summary="Some other preferences you can see.">
+         <!-- Arbitrary key/value pairs can be included with a header as
+              arguments to its fragment. -->
+         <extra android:name="someKey" android:value="someHeaderValue" />
+     </header>
+
+     <header android:icon="@drawable/ic_settings"
+         android:title="Intent"
+         android:summary="Launches an Intent.">
+         <intent android:action="android.intent.action.VIEW"
+             android:data="http://www.android.com" />
+     </header>
+
+</preference-headers>
